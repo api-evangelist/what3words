@@ -1,0 +1,259 @@
+aid: what3words
+url: https://raw.githubusercontent.com/api-evangelist/what3words/refs/heads/main/apis.yml
+name: what3words
+kind: company
+description: >-
+  what3words has divided the world into a grid of three-metre squares and
+  given each one a unique three-word address (e.g. ///filled.count.soap). The
+  what3words Public API converts between three-word addresses and latitude /
+  longitude coordinates, offers an AutoSuggest with autocorrect for
+  voice/typing input, exposes supported languages and locale variants, and
+  returns grid sections as GeoJSON. The API is HTTPS GET only, authenticated
+  by API key in a query parameter or X-Api-Key header, and is wrapped by
+  official SDKs for Swift, Android, Java, JavaScript, Python, PHP, and .NET,
+  plus UI components for map and OCR experiences.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Geocoding
+  - Addressing
+  - Location
+  - Three Word Address
+  - Maps
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.19'
+apis:
+  - aid: what3words:public-api
+    name: what3words Public API
+    description: >-
+      REST API for converting between three-word addresses and latitude /
+      longitude coordinates, with AutoSuggest, available-languages, and
+      grid-section endpoints. JSON or GeoJSON response formats. Authenticated
+      via the X-Api-Key header or a key query parameter.
+    humanURL: https://developer.what3words.com/public-api/docs
+    baseURL: https://api.what3words.com/v3
+    tags:
+      - REST API
+      - Geocoding
+      - Addressing
+    properties:
+      - type: Documentation
+        url: https://developer.what3words.com/public-api/docs
+      - type: Repository
+        url: https://github.com/what3words/what3words-api-docs
+  - aid: what3words:convert-to-3wa
+    name: what3words convert-to-3wa Endpoint
+    description: >-
+      Converts a latitude / longitude coordinate into a three-word address in
+      a chosen language.
+    humanURL: https://developer.what3words.com/public-api/docs#convert-to-3wa
+    baseURL: https://api.what3words.com/v3/convert-to-3wa
+    tags:
+      - Reverse Geocoding
+      - Endpoint
+    properties:
+      - type: Documentation
+        url: https://developer.what3words.com/public-api/docs#convert-to-3wa
+  - aid: what3words:convert-to-coordinates
+    name: what3words convert-to-coordinates Endpoint
+    description: >-
+      Converts a three-word address into a latitude / longitude coordinate and
+      a bounding square.
+    humanURL: https://developer.what3words.com/public-api/docs#convert-to-coordinates
+    baseURL: https://api.what3words.com/v3/convert-to-coordinates
+    tags:
+      - Forward Geocoding
+      - Endpoint
+    properties:
+      - type: Documentation
+        url: https://developer.what3words.com/public-api/docs#convert-to-coordinates
+  - aid: what3words:autosuggest
+    name: what3words AutoSuggest Endpoint
+    description: >-
+      Validates and autocorrects partial or imperfect three-word input,
+      returning ranked suggestions. Supports focus, clipping by polygon,
+      country, bounding box or circle, and voice-input modes.
+    humanURL: https://developer.what3words.com/public-api/docs#autosuggest
+    baseURL: https://api.what3words.com/v3/autosuggest
+    tags:
+      - AutoSuggest
+      - Endpoint
+      - Voice
+    properties:
+      - type: Documentation
+        url: https://developer.what3words.com/public-api/docs#autosuggest
+  - aid: what3words:available-languages
+    name: what3words available-languages Endpoint
+    description: >-
+      Returns all supported what3words languages and locale variants.
+    humanURL: https://developer.what3words.com/public-api/docs#available-languages
+    baseURL: https://api.what3words.com/v3/available-languages
+    tags:
+      - Languages
+      - Endpoint
+    properties:
+      - type: Documentation
+        url: https://developer.what3words.com/public-api/docs#available-languages
+  - aid: what3words:grid-section
+    name: what3words grid-section Endpoint
+    description: >-
+      Returns the what3words three-metre grid for a specified bounding box as
+      JSON or GeoJSON, suitable for map overlays.
+    humanURL: https://developer.what3words.com/public-api/docs#grid-section
+    baseURL: https://api.what3words.com/v3/grid-section
+    tags:
+      - Grid
+      - GeoJSON
+      - Endpoint
+    properties:
+      - type: Documentation
+        url: https://developer.what3words.com/public-api/docs#grid-section
+  - aid: what3words:javascript-sdk
+    name: what3words JavaScript SDK
+    description: >-
+      Official JavaScript wrapper around the what3words Public API for
+      browser and Node.js applications.
+    humanURL: https://github.com/what3words/w3w-node-wrapper
+    baseURL: https://github.com/what3words/w3w-node-wrapper
+    tags:
+      - SDK
+      - JavaScript
+    properties:
+      - type: Repository
+        url: https://github.com/what3words/w3w-node-wrapper
+  - aid: what3words:python-sdk
+    name: what3words Python SDK
+    description: >-
+      Official Python wrapper around the what3words Public API.
+    humanURL: https://github.com/what3words/w3w-python-wrapper
+    baseURL: https://github.com/what3words/w3w-python-wrapper
+    tags:
+      - SDK
+      - Python
+    properties:
+      - type: Repository
+        url: https://github.com/what3words/w3w-python-wrapper
+  - aid: what3words:java-sdk
+    name: what3words Java SDK
+    description: >-
+      Official Java wrapper around the what3words Public API for server-side
+      JVM applications.
+    humanURL: https://github.com/what3words/w3w-java-wrapper
+    baseURL: https://github.com/what3words/w3w-java-wrapper
+    tags:
+      - SDK
+      - Java
+    properties:
+      - type: Repository
+        url: https://github.com/what3words/w3w-java-wrapper
+  - aid: what3words:php-sdk
+    name: what3words PHP SDK
+    description: >-
+      Official PHP wrapper around the what3words Public API.
+    humanURL: https://github.com/what3words/w3w-php-wrapper
+    baseURL: https://github.com/what3words/w3w-php-wrapper
+    tags:
+      - SDK
+      - PHP
+    properties:
+      - type: Repository
+        url: https://github.com/what3words/w3w-php-wrapper
+  - aid: what3words:swift-sdk
+    name: what3words Swift SDK
+    description: >-
+      Official Swift wrapper around the what3words Public API for iOS, iPadOS,
+      and macOS applications.
+    humanURL: https://github.com/what3words/w3w-swift-wrapper
+    baseURL: https://github.com/what3words/w3w-swift-wrapper
+    tags:
+      - SDK
+      - Swift
+      - iOS
+    properties:
+      - type: Repository
+        url: https://github.com/what3words/w3w-swift-wrapper
+  - aid: what3words:android-sdk
+    name: what3words Android SDK
+    description: >-
+      Official Android wrapper around the what3words Public API for native
+      Android applications.
+    humanURL: https://github.com/what3words/w3w-android-wrapper
+    baseURL: https://github.com/what3words/w3w-android-wrapper
+    tags:
+      - SDK
+      - Android
+    properties:
+      - type: Repository
+        url: https://github.com/what3words/w3w-android-wrapper
+  - aid: what3words:swift-components-map
+    name: what3words Swift Map Components
+    description: >-
+      UI components for embedding what3words grids, markers, and AutoSuggest
+      experiences in Apple Maps-based iOS and iPadOS applications.
+    humanURL: https://github.com/what3words/w3w-swift-components
+    baseURL: https://github.com/what3words/w3w-swift-components
+    tags:
+      - Components
+      - Swift
+      - Map
+    properties:
+      - type: Repository
+        url: https://github.com/what3words/w3w-swift-components
+  - aid: what3words:ocr-component
+    name: what3words OCR Camera Component
+    description: >-
+      UI component that uses the device camera to scan three-word addresses
+      from signage, packaging, or printed materials.
+    humanURL: https://github.com/what3words
+    baseURL: https://github.com/what3words
+    tags:
+      - OCR
+      - Camera
+      - Component
+    properties:
+      - type: Repository
+        url: https://github.com/what3words
+  - aid: what3words:api-docs-repo
+    name: what3words API Docs and OpenAPI Repository
+    description: >-
+      Public repository hosting the OpenAPI specification, LLM files, and
+      reference material for the what3words Public API.
+    humanURL: https://github.com/what3words/what3words-api-docs
+    baseURL: https://github.com/what3words/what3words-api-docs
+    tags:
+      - OpenAPI
+      - Documentation
+      - Open Source
+    properties:
+      - type: Repository
+        url: https://github.com/what3words/what3words-api-docs
+common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/what3words
+  - type: Website
+    url: https://what3words.com/
+  - type: Documentation
+    url: https://developer.what3words.com/public-api/docs
+  - type: GitHub
+    url: https://github.com/what3words
+  - type: Plans
+    url: plans/what3words-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/what3words-rate-limits.yml
+  - type: FinOps
+    url: finops/what3words-finops.yml
+  - type: Integrations
+    url: https://what3words.com/business/
+integrations:
+  - name: Mercedes-Benz
+  - name: Ford
+  - name: Subaru
+  - name: Lamborghini
+  - name: Triumph
+  - name: TomTom
+  - name: HERE
+  - name: Google
+  - name: Microsoft
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
