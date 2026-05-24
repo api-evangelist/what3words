@@ -1,0 +1,158 @@
+openapi: 3.1.0
+info:
+  title: what3words Public API
+  description: |
+    The what3words API converts between 3 word addresses (e.g. ///filled.count.soap)
+    and latitude/longitude coordinates, returns autosuggest candidates, grid
+    sections and supported languages.
+  version: "3.0"
+  contact:
+    name: what3words
+    url: https://developer.what3words.com/public-api/docs
+servers:
+  - url: https://api.what3words.com/v3
+    description: Production
+security:
+  - ApiKeyQuery: []
+  - ApiKeyHeader: []
+paths:
+  /convert-to-coordinates:
+    get:
+      summary: Convert a 3 word address to coordinates
+      operationId: convertToCoordinates
+      parameters:
+        - name: words
+          in: query
+          required: true
+          schema: { type: string }
+          description: A 3 word address as a string e.g. filled.count.soap
+        - name: format
+          in: query
+          required: false
+          schema: { type: string, enum: [json, geojson], default: json }
+        - name: language
+          in: query
+          required: false
+          schema: { type: string }
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+  /convert-to-3wa:
+    get:
+      summary: Convert coordinates to a 3 word address
+      operationId: convertTo3wa
+      parameters:
+        - name: coordinates
+          in: query
+          required: true
+          schema: { type: string }
+          description: Latitude and longitude as comma separated values e.g. 51.521251,-0.203586
+        - name: language
+          in: query
+          required: false
+          schema: { type: string, default: en }
+        - name: format
+          in: query
+          required: false
+          schema: { type: string, enum: [json, geojson], default: json }
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+  /autosuggest:
+    get:
+      summary: AutoSuggest possible 3 word addresses
+      operationId: autosuggest
+      parameters:
+        - name: input
+          in: query
+          required: true
+          schema: { type: string }
+        - name: n-results
+          in: query
+          required: false
+          schema: { type: integer, default: 3 }
+        - name: focus
+          in: query
+          required: false
+          schema: { type: string }
+        - name: n-focus-results
+          in: query
+          required: false
+          schema: { type: integer }
+        - name: clip-to-country
+          in: query
+          required: false
+          schema: { type: string }
+        - name: clip-to-bounding-box
+          in: query
+          required: false
+          schema: { type: string }
+        - name: clip-to-circle
+          in: query
+          required: false
+          schema: { type: string }
+        - name: clip-to-polygon
+          in: query
+          required: false
+          schema: { type: string }
+        - name: input-type
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [text, vocon-hybrid, nmdp-asr, generic-voice]
+        - name: language
+          in: query
+          required: false
+          schema: { type: string }
+        - name: prefer-land
+          in: query
+          required: false
+          schema: { type: boolean, default: true }
+      responses:
+        "200":
+          description: Suggestion list
+          content:
+            application/json: {}
+  /grid-section:
+    get:
+      summary: Returns a section of the 3m x 3m what3words grid for a bounding box
+      operationId: gridSection
+      parameters:
+        - name: bounding-box
+          in: query
+          required: true
+          schema: { type: string }
+          description: Bounding box as south_lat,west_lng,north_lat,east_lng
+        - name: format
+          in: query
+          required: false
+          schema: { type: string, enum: [json, geojson], default: json }
+      responses:
+        "200":
+          description: Grid section data
+          content:
+            application/json: {}
+  /available-languages:
+    get:
+      summary: List all 3 word address languages supported
+      operationId: availableLanguages
+      responses:
+        "200":
+          description: Language list
+          content:
+            application/json: {}
+components:
+  securitySchemes:
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: key
+    ApiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-Api-Key
