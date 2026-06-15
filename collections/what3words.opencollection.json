@@ -1,0 +1,179 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "what3words Public API",
+    "version": "3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "key",
+      "value": "{{key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Convert a 3 word address to coordinates",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.what3words.com/v3/convert-to-coordinates",
+        "params": [
+          {
+            "name": "words",
+            "value": "",
+            "type": "query",
+            "description": "A 3 word address as a string e.g. filled.count.soap"
+          },
+          {
+            "name": "format",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "language",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Convert a 3 word address to coordinates"
+    },
+    {
+      "info": {
+        "name": "Convert coordinates to a 3 word address",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.what3words.com/v3/convert-to-3wa",
+        "params": [
+          {
+            "name": "coordinates",
+            "value": "",
+            "type": "query",
+            "description": "Latitude and longitude as comma separated values e.g. 51.521251,-0.203586"
+          },
+          {
+            "name": "language",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "format",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Convert coordinates to a 3 word address"
+    },
+    {
+      "info": {
+        "name": "AutoSuggest possible 3 word addresses",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.what3words.com/v3/autosuggest",
+        "params": [
+          {
+            "name": "input",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "n-results",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "focus",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "n-focus-results",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "clip-to-country",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "clip-to-bounding-box",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "clip-to-circle",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "clip-to-polygon",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "input-type",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "language",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "prefer-land",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "AutoSuggest possible 3 word addresses"
+    },
+    {
+      "info": {
+        "name": "Returns a section of the 3m x 3m what3words grid for a bounding box",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.what3words.com/v3/grid-section",
+        "params": [
+          {
+            "name": "bounding-box",
+            "value": "",
+            "type": "query",
+            "description": "Bounding box as south_lat,west_lng,north_lat,east_lng"
+          },
+          {
+            "name": "format",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Returns a section of the 3m x 3m what3words grid for a bounding box"
+    },
+    {
+      "info": {
+        "name": "List all 3 word address languages supported",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.what3words.com/v3/available-languages"
+      },
+      "docs": "List all 3 word address languages supported"
+    }
+  ],
+  "bundled": true
+}

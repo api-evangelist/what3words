@@ -1,0 +1,577 @@
+{
+  "item": [
+    {
+      "id": "35577b53-fea2-4657-956b-be1acc9012ea",
+      "name": "Convert a 3 word address to coordinates",
+      "request": {
+        "name": "Convert a 3 word address to coordinates",
+        "description": {},
+        "url": {
+          "path": [
+            "convert-to-coordinates"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "words",
+              "value": "<string>",
+              "description": "(Required) A 3 word address as a string e.g. filled.count.soap"
+            },
+            {
+              "disabled": false,
+              "key": "format",
+              "value": "json"
+            },
+            {
+              "disabled": false,
+              "key": "language",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "3e3906b7-8584-40af-9839-5b4a1b40d369",
+          "name": "Successful response",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "convert-to-coordinates"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "words",
+                  "value": "<string>"
+                },
+                {
+                  "key": "format",
+                  "value": "json"
+                },
+                {
+                  "key": "language",
+                  "value": "<string>"
+                },
+                {
+                  "key": "key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "\"\"",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "85656759-6223-410b-a007-52133657fe00",
+      "name": "Convert coordinates to a 3 word address",
+      "request": {
+        "name": "Convert coordinates to a 3 word address",
+        "description": {},
+        "url": {
+          "path": [
+            "convert-to-3wa"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "coordinates",
+              "value": "<string>",
+              "description": "(Required) Latitude and longitude as comma separated values e.g. 51.521251,-0.203586"
+            },
+            {
+              "disabled": false,
+              "key": "language",
+              "value": "en"
+            },
+            {
+              "disabled": false,
+              "key": "format",
+              "value": "json"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "17abaae1-cc6b-4ca3-98ca-da98bf2b48c9",
+          "name": "Successful response",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "convert-to-3wa"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "coordinates",
+                  "value": "<string>"
+                },
+                {
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "key": "format",
+                  "value": "json"
+                },
+                {
+                  "key": "key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "\"\"",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "c1ef043c-d2b5-4356-ab6e-74a9d1b26e69",
+      "name": "AutoSuggest possible 3 word addresses",
+      "request": {
+        "name": "AutoSuggest possible 3 word addresses",
+        "description": {},
+        "url": {
+          "path": [
+            "autosuggest"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "input",
+              "value": "<string>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "n-results",
+              "value": "3"
+            },
+            {
+              "disabled": false,
+              "key": "focus",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "n-focus-results",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "clip-to-country",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "clip-to-bounding-box",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "clip-to-circle",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "clip-to-polygon",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "input-type",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "language",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "prefer-land",
+              "value": "true"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "d64341be-4bfe-41a1-bd00-d370af9436ff",
+          "name": "Suggestion list",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "autosuggest"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "input",
+                  "value": "<string>"
+                },
+                {
+                  "key": "n-results",
+                  "value": "3"
+                },
+                {
+                  "key": "focus",
+                  "value": "<string>"
+                },
+                {
+                  "key": "n-focus-results",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "clip-to-country",
+                  "value": "<string>"
+                },
+                {
+                  "key": "clip-to-bounding-box",
+                  "value": "<string>"
+                },
+                {
+                  "key": "clip-to-circle",
+                  "value": "<string>"
+                },
+                {
+                  "key": "clip-to-polygon",
+                  "value": "<string>"
+                },
+                {
+                  "key": "input-type",
+                  "value": "<string>"
+                },
+                {
+                  "key": "language",
+                  "value": "<string>"
+                },
+                {
+                  "key": "prefer-land",
+                  "value": "true"
+                },
+                {
+                  "key": "key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "\"\"",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "c39dcbb2-bf37-40f0-8a80-7cdcb25052ee",
+      "name": "Returns a section of the 3m x 3m what3words grid for a bounding box",
+      "request": {
+        "name": "Returns a section of the 3m x 3m what3words grid for a bounding box",
+        "description": {},
+        "url": {
+          "path": [
+            "grid-section"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "bounding-box",
+              "value": "<string>",
+              "description": "(Required) Bounding box as south_lat,west_lng,north_lat,east_lng"
+            },
+            {
+              "disabled": false,
+              "key": "format",
+              "value": "json"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "f3a5bd3d-4486-4832-b297-55d1896fc69c",
+          "name": "Grid section data",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "grid-section"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "bounding-box",
+                  "value": "<string>"
+                },
+                {
+                  "key": "format",
+                  "value": "json"
+                },
+                {
+                  "key": "key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "\"\"",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "68322bfe-d293-4641-9dba-91a5057ae4d8",
+      "name": "List all 3 word address languages supported",
+      "request": {
+        "name": "List all 3 word address languages supported",
+        "description": {},
+        "url": {
+          "path": [
+            "available-languages"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "5a1f2882-793b-4f79-90f4-e3df1a000704",
+          "name": "Language list",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "available-languages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "\"\"",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.what3words.com/v3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "78512c32-ef14-431a-b344-9f165c3e5cee",
+    "name": "what3words Public API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The what3words API converts between 3 word addresses (e.g. ///filled.count.soap)\nand latitude/longitude coordinates, returns autosuggest candidates, grid\nsections and supported languages.\n\n\nContact Support:\n Name: what3words",
+      "type": "text/plain"
+    }
+  }
+}
