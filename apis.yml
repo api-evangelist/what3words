@@ -228,6 +228,10 @@ apis:
       - type: Repository
         url: https://github.com/what3words/what3words-api-docs
 common:
+  - type: DomainSecurity
+    url: security/what3words-domain-security.yml
+  - type: Authentication
+    url: authentication/what3words-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/what3words
   - type: Website
