@@ -1,0 +1,60 @@
+openapi: 3.1.0
+info:
+  title: what3words Public Autosuggest Grid Section API
+  description: 'The what3words API converts between 3 word addresses (e.g. ///filled.count.soap)
+
+    and latitude/longitude coordinates, returns autosuggest candidates, grid
+
+    sections and supported languages.
+
+    '
+  version: '3.0'
+  contact:
+    name: what3words
+    url: https://developer.what3words.com/public-api/docs
+servers:
+- url: https://api.what3words.com/v3
+  description: Production
+security:
+- ApiKeyQuery: []
+- ApiKeyHeader: []
+tags:
+- name: Grid Section
+paths:
+  /grid-section:
+    get:
+      summary: Returns a section of the 3m x 3m what3words grid for a bounding box
+      operationId: gridSection
+      parameters:
+      - name: bounding-box
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Bounding box as south_lat,west_lng,north_lat,east_lng
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - geojson
+          default: json
+      responses:
+        '200':
+          description: Grid section data
+          content:
+            application/json: {}
+      tags:
+      - Grid Section
+components:
+  securitySchemes:
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: key
+    ApiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-Api-Key

@@ -1,0 +1,65 @@
+openapi: 3.1.0
+info:
+  title: what3words Public Autosuggest Convert To Coordinates API
+  description: 'The what3words API converts between 3 word addresses (e.g. ///filled.count.soap)
+
+    and latitude/longitude coordinates, returns autosuggest candidates, grid
+
+    sections and supported languages.
+
+    '
+  version: '3.0'
+  contact:
+    name: what3words
+    url: https://developer.what3words.com/public-api/docs
+servers:
+- url: https://api.what3words.com/v3
+  description: Production
+security:
+- ApiKeyQuery: []
+- ApiKeyHeader: []
+tags:
+- name: Convert To Coordinates
+paths:
+  /convert-to-coordinates:
+    get:
+      summary: Convert a 3 word address to coordinates
+      operationId: convertToCoordinates
+      parameters:
+      - name: words
+        in: query
+        required: true
+        schema:
+          type: string
+        description: A 3 word address as a string e.g. filled.count.soap
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - json
+          - geojson
+          default: json
+      - name: language
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+      tags:
+      - Convert To Coordinates
+components:
+  securitySchemes:
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: key
+    ApiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-Api-Key
