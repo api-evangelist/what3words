@@ -1,0 +1,22 @@
+{
+  "provider": "what3words",
+  "sources": [
+    "what3words-autosuggest-api-openapi.yml",
+    "what3words-available-languages-api-openapi.yml",
+    "what3words-convert-to-3wa-api-openapi.yml",
+    "what3words-convert-to-coordinates-api-openapi.yml",
+    "what3words-grid-section-api-openapi.yml"
+  ],
+  "outputs": [
+    "what3words-autosuggest-api-openapi.yml",
+    "what3words-available-languages-api-openapi.yml",
+    "what3words-convert-to-3wa-api-openapi.yml",
+    "what3words-convert-to-coordinates-api-openapi.yml",
+    "what3words-grid-section-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
