@@ -1,0 +1,121 @@
+{
+  "item": [
+    {
+      "id": "1daa88fc-80f8-4532-836d-4d3512c5b778",
+      "name": "Available Languages",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f9dd3043-ceba-45e7-abf3-bfb0da0a5d9b",
+          "name": "List all 3 word address languages supported",
+          "request": {
+            "name": "List all 3 word address languages supported",
+            "description": {},
+            "url": {
+              "path": [
+                "available-languages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "402bcb5b-3fbb-46ec-8b97-ca09d5c8589f",
+              "name": "Language list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "available-languages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.what3words.com/v3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "454424e3-ffde-4f7f-b31c-c382551f51ad",
+    "name": "what3words Public Autosuggest Available Languages API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The what3words API converts between 3 word addresses (e.g. ///filled.count.soap)\nand latitude/longitude coordinates, returns autosuggest candidates, grid\nsections and supported languages.\n\n\nContact Support:\n Name: what3words",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "what3words Public Autosuggest Grid Section API",
+    "version": "3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "key",
+      "value": "{{key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Grid Section",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Returns a section of the 3m x 3m what3words grid for a bounding box",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.what3words.com/v3/grid-section",
+            "params": [
+              {
+                "name": "bounding-box",
+                "value": "",
+                "type": "query",
+                "description": "Bounding box as south_lat,west_lng,north_lat,east_lng"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns a section of the 3m x 3m what3words grid for a bounding box"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

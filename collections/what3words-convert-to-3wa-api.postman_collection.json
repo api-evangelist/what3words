@@ -1,0 +1,150 @@
+{
+  "item": [
+    {
+      "id": "3ab99d8b-e05a-44a7-bf68-8ba71388543d",
+      "name": "Convert To 3wa",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "84ee5f6f-ed1e-4044-b947-9c1d2cd6d1a5",
+          "name": "Convert coordinates to a 3 word address",
+          "request": {
+            "name": "Convert coordinates to a 3 word address",
+            "description": {},
+            "url": {
+              "path": [
+                "convert-to-3wa"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "coordinates",
+                  "value": "<string>",
+                  "description": "(Required) Latitude and longitude as comma separated values e.g. 51.521251,-0.203586"
+                },
+                {
+                  "disabled": false,
+                  "key": "language",
+                  "value": "en"
+                },
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "json"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6d04a2eb-5bfa-444d-b4b6-1cbc4e1467a7",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "convert-to-3wa"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "coordinates",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "language",
+                      "value": "en"
+                    },
+                    {
+                      "key": "format",
+                      "value": "json"
+                    },
+                    {
+                      "key": "key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.what3words.com/v3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ee8f2000-bd0f-4c22-802d-31990078e8ee",
+    "name": "what3words Public Autosuggest Convert To 3wa API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The what3words API converts between 3 word addresses (e.g. ///filled.count.soap)\nand latitude/longitude coordinates, returns autosuggest candidates, grid\nsections and supported languages.\n\n\nContact Support:\n Name: what3words",
+      "type": "text/plain"
+    }
+  }
+}

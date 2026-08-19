@@ -1,0 +1,141 @@
+{
+  "item": [
+    {
+      "id": "7654645d-a1f1-4c21-9387-d476c0807bcb",
+      "name": "Grid Section",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ef93a2bc-cb31-409e-9c31-32b06d06d5e4",
+          "name": "Returns a section of the 3m x 3m what3words grid for a bounding box",
+          "request": {
+            "name": "Returns a section of the 3m x 3m what3words grid for a bounding box",
+            "description": {},
+            "url": {
+              "path": [
+                "grid-section"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "bounding-box",
+                  "value": "<string>",
+                  "description": "(Required) Bounding box as south_lat,west_lng,north_lat,east_lng"
+                },
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "json"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1f4304b7-380d-44a8-b64b-64c0025b8a1a",
+              "name": "Grid section data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "grid-section"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "bounding-box",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "json"
+                    },
+                    {
+                      "key": "key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.what3words.com/v3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "2d159483-0317-418c-9a90-c326efee32fe",
+    "name": "what3words Public Autosuggest Grid Section API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The what3words API converts between 3 word addresses (e.g. ///filled.count.soap)\nand latitude/longitude coordinates, returns autosuggest candidates, grid\nsections and supported languages.\n\n\nContact Support:\n Name: what3words",
+      "type": "text/plain"
+    }
+  }
+}

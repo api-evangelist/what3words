@@ -1,0 +1,55 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "what3words Public Autosuggest Convert To 3wa API",
+    "version": "3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "key",
+      "value": "{{key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Convert To 3wa",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Convert coordinates to a 3 word address",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.what3words.com/v3/convert-to-3wa",
+            "params": [
+              {
+                "name": "coordinates",
+                "value": "",
+                "type": "query",
+                "description": "Latitude and longitude as comma separated values e.g. 51.521251,-0.203586"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Convert coordinates to a 3 word address"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

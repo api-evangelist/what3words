@@ -1,0 +1,55 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "what3words Public Autosuggest Convert To Coordinates API",
+    "version": "3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "key",
+      "value": "{{key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Convert To Coordinates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Convert a 3 word address to coordinates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.what3words.com/v3/convert-to-coordinates",
+            "params": [
+              {
+                "name": "words",
+                "value": "",
+                "type": "query",
+                "description": "A 3 word address as a string e.g. filled.count.soap"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Convert a 3 word address to coordinates"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

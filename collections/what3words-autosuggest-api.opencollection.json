@@ -1,0 +1,94 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "what3words Public Autosuggest API",
+    "version": "3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "key",
+      "value": "{{key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Autosuggest",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "AutoSuggest possible 3 word addresses",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.what3words.com/v3/autosuggest",
+            "params": [
+              {
+                "name": "input",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "n-results",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "focus",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "n-focus-results",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "clip-to-country",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "clip-to-bounding-box",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "clip-to-circle",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "clip-to-polygon",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "input-type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "prefer-land",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "AutoSuggest possible 3 word addresses"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
