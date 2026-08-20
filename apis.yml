@@ -61,6 +61,8 @@ apis:
   baseURL: https://api.what3words.com/v3/convert-to-3wa
   tags:
   - Reverse Geocoding
+  tags_raw:
+  - Reverse Geocoding
   - Endpoint
   properties:
   - type: Documentation
@@ -72,6 +74,8 @@ apis:
   humanURL: https://developer.what3words.com/public-api/docs#convert-to-coordinates
   baseURL: https://api.what3words.com/v3/convert-to-coordinates
   tags:
+  - Forward Geocoding
+  tags_raw:
   - Forward Geocoding
   - Endpoint
   properties:
@@ -85,6 +89,9 @@ apis:
   humanURL: https://developer.what3words.com/public-api/docs#autosuggest
   baseURL: https://api.what3words.com/v3/autosuggest
   tags:
+  - Autosuggest
+  - Voice
+  tags_raw:
   - AutoSuggest
   - Endpoint
   - Voice
@@ -97,6 +104,8 @@ apis:
   humanURL: https://developer.what3words.com/public-api/docs#available-languages
   baseURL: https://api.what3words.com/v3/available-languages
   tags:
+  - Language
+  tags_raw:
   - Languages
   - Endpoint
   properties:
@@ -110,6 +119,9 @@ apis:
   humanURL: https://developer.what3words.com/public-api/docs#grid-section
   baseURL: https://api.what3words.com/v3/grid-section
   tags:
+  - Grid
+  - GeoJSON
+  tags_raw:
   - Grid
   - GeoJSON
   - Endpoint
@@ -222,6 +234,10 @@ apis:
   humanURL: https://github.com/what3words/what3words-api-docs
   baseURL: https://github.com/what3words/what3words-api-docs
   tags:
+  - OpenAPI
+  - Documentation
+  - Open-Source
+  tags_raw:
   - OpenAPI
   - Documentation
   - Open Source
