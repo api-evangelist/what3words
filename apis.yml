@@ -12,6 +12,19 @@ description: >-
   by API key in a query parameter or X-Api-Key header, and is wrapped by
   official SDKs for Swift, Android, Java, JavaScript, Python, PHP, and .NET,
   plus UI components for map and OCR experiences.
+deliveryModel:
+  model: unknown
+  open_source: unknown
+  commercial: true
+  callable_host: true
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  - pricing
+  - repository-unlicensed
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: self-serve
@@ -296,6 +309,8 @@ apis:
   - type: OpenAPI
     url: openapi/what3words-grid-section-api-openapi.yml
 common:
+  - type: IssueTracker
+    url: https://github.com/what3words/what3words-api-docs/issues
   - type: AgenticAccess
     url: agentic-access/what3words-agentic-access.yml
   - type: DomainSecurity
