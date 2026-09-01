@@ -102,7 +102,7 @@ apis:
   humanURL: https://developer.what3words.com/public-api/docs#autosuggest
   baseURL: https://api.what3words.com/v3/autosuggest
   tags:
-  - AutoSuggest
+  - Autosuggest
   - Voice
   tags_raw:
   - AutoSuggest
