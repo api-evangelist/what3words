@@ -236,6 +236,10 @@ apis:
   tags:
   - OCR
   - Camera
+  - Components
+  tags_raw:
+  - OCR
+  - Camera
   - Component
   properties:
   - type: Repository
