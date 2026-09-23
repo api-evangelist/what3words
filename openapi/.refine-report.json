@@ -1,11 +1,7 @@
 {
   "provider": "what3words",
   "sources": [
-    "what3words-autosuggest-api-openapi.yml",
-    "what3words-available-languages-api-openapi.yml",
-    "what3words-convert-to-3wa-api-openapi.yml",
-    "what3words-convert-to-coordinates-api-openapi.yml",
-    "what3words-grid-section-api-openapi.yml"
+    "_original/what3words-openapi.yml"
   ],
   "outputs": [
     "what3words-autosuggest-api-openapi.yml",
@@ -17,6 +13,26 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "what3words-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "what3words-openapi.yml: tagged paths GET /convert-to-coordinates -> Convert To Coordinates",
+    "what3words-openapi.yml: tagged paths GET /convert-to-3wa -> Convert To 3wa",
+    "what3words-openapi.yml: tagged paths GET /autosuggest -> Autosuggest",
+    "what3words-openapi.yml: tagged paths GET /grid-section -> Grid Section",
+    "what3words-openapi.yml: tagged paths GET /available-languages -> Available Languages",
+    "what3words-openapi.yml: declared missing tag: Autosuggest",
+    "what3words-openapi.yml: declared missing tag: Available Languages",
+    "what3words-openapi.yml: declared missing tag: Convert To 3wa",
+    "what3words-openapi.yml: declared missing tag: Convert To Coordinates",
+    "what3words-openapi.yml: declared missing tag: Grid Section",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "what3words-autosuggest-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "what3words-available-languages-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "what3words-convert-to-3wa-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "what3words-convert-to-coordinates-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "what3words-grid-section-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

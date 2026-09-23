@@ -1,13 +1,11 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: what3words Public Autosuggest API
   description: 'The what3words API converts between 3 word addresses (e.g. ///filled.count.soap)
 
     and latitude/longitude coordinates, returns autosuggest candidates, grid
 
-    sections and supported languages.
-
-    '
+    sections and supported languages.'
   version: '3.0'
   contact:
     name: what3words
