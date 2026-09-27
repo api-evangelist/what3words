@@ -13,17 +13,24 @@ description: >-
   official SDKs for Swift, Android, Java, JavaScript, Python, PHP, and .NET,
   plus UI components for map and OCR experiences.
 deliveryModel:
-  model: unknown
+  model: saas
+  license_evidence:
+    not_product:
+    - what3words/w3w-android-wrapper
+    - what3words/w3w-java-wrapper
+    - what3words/w3w-node-wrapper
+    - what3words/w3w-php-wrapper
+    - what3words/w3w-python-wrapper
   open_source: unknown
   commercial: true
   callable_host: true
-  label: Delivery model not determined — needs a product licence on record
+  label: Hosted service · you call their endpoint
   confidence: low
   source:
   - openapi
   - pricing
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: free
@@ -46,6 +53,7 @@ tags:
   - Location
   - Three Word Address
   - Maps
+  - Geospatial
 created: '2026-05-23'
 modified: '2026-05-23'
 specificationVersion: '0.23'
@@ -222,6 +230,10 @@ apis:
   tags:
   - Components
   - Swift
+  - Maps
+  tags_raw:
+  - Components
+  - Swift
   - Map
   properties:
   - type: Repository
@@ -254,11 +266,12 @@ apis:
   tags:
   - OpenAPI
   - Documentation
-  - Open-Source
+  - Open Source
   tags_raw:
   - OpenAPI
   - Documentation
   - Open Source
+  - Open-Source
   properties:
   - type: Repository
     url: https://github.com/what3words/what3words-api-docs
