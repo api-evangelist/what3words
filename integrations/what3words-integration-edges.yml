@@ -2,6 +2,7 @@ generated: '2026-10-14'
 method: searched
 checked:
 - https://vendor-list.consensu.org/v3/vendor-list.json
+- procore/integrations/procore-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: IAB Europe TCF Global Vendor List
@@ -33,3 +34,22 @@ edges:
     detected: '2026-10-14'
   detected_by: sweep-adtech.py
   detected: '2026-10-14'
+- partner_name: Procore (own)
+  partner: procore
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.procore.com/apps/what3words
+  mirror_of: procore/integrations/procore-integration-edges.yml
+  apps:
+  - what3words
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Other
+source:
+- procore/integrations/procore-integration-edges.yml
