@@ -32,16 +32,3 @@
     detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
-- slug: what3words-procore-own
-  label: Procore (own)
-  partner: procore
-  partner_name: Procore (own)
-  category: Other
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://marketplace.procore.com/apps/what3words
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
